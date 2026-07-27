@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #1f2937;
+  background: #f3f4f6;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.registration-page {
+  width: min(920px, calc(100% - 32px));
+  margin: 32px auto;
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(31, 41, 55, 0.08);
+}
+
+.panel + .panel,
+.form-panel {
+  margin-top: 20px;
+}
+
+.page-title {
+  margin: 0 0 8px;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.page-subtitle {
+  margin: 0;
+  color: #4b5563;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+  border: 1px solid #9ca3af;
+  border-radius: 6px;
+  padding: 10px 12px;
+  color: #111827;
+  background: #ffffff;
+}
+
+.form-field select:disabled {
+  color: #6b7280;
+  background: #f9fafb;
+}
+
+.option-group {
+  margin: 0;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.option-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.option {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.error {
+  margin: 10px 0 0;
+  color: #b91c1c;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.button {
+  border-radius: 6px;
+  padding: 10px 18px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.button-primary {
+  border: 1px solid #2563eb;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.button-secondary {
+  border: 1px solid #9ca3af;
+  background: #ffffff;
+  color: #1f2937;
+}
+
+.section-title {
+  margin: 0 0 16px;
+  font-size: 22px;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: minmax(120px, 180px) 1fr;
+  gap: 10px 16px;
+  margin: 0;
+}
+
+.summary dt {
+  font-weight: 700;
+}
+
+.summary dd {
+  margin: 0;
+}
+
+@media (max-width: 560px) {
+  .registration-page {
+    width: min(100% - 20px, 920px);
+    margin: 16px auto;
+  }
+
+  .panel {
+    padding: 18px;
+  }
+
+  .form-actions {
+    justify-content: stretch;
+  }
+
+  .button {
+    flex: 1;
+  }
+
+  .summary {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
